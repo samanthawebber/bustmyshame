@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Storify your shame-ridden memories.">
     <meta property="og:description" content="Haunted by a memory of something you did? Telling your shameful memory as a story allows you to see it in context and process it properly.">
-    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/f1787cee-fb87-4d1b-ba17-9a7917948a4c.png?token=S0ZB6vTEVOLQFzgz9Pw0rCl65qJldj4Nq82RtmCRhGs&height=855&width=1200&expires=33264994953">
+    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/b2d1e53d-8f76-4693-8759-dcef6182994a.png?token=Ch8tEXCzgVtSCkYnteK3tpmSy_G4eSl7jn3sWNHGfao&height=631&width=1200&expires=33265108939">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -22,41 +22,54 @@
     <meta property="twitter:url" content="https://bustmyshame.com">
     <meta name="twitter:title" content="Storify your shame-ridden memories.">
     <meta name="twitter:description" content="Haunted by a memory of something you did? Telling your shameful memory as a story allows you to see it in context and process it properly.">
-    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/f1787cee-fb87-4d1b-ba17-9a7917948a4c.png?token=S0ZB6vTEVOLQFzgz9Pw0rCl65qJldj4Nq82RtmCRhGs&height=855&width=1200&expires=33264994953">
+    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/b2d1e53d-8f76-4693-8759-dcef6182994a.png?token=Ch8tEXCzgVtSCkYnteK3tpmSy_G4eSl7jn3sWNHGfao&height=631&width=1200&expires=33265108939">
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
     <link rel="stylesheet" href="output.css">
     <script src="typewriter.js"></script>
     <script src="mobile_typewriter.js"></script>
+    <script src="story.js"></script>
   </head>
   <body class="bg-sugarcane">
-    <div>
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Bust My Shame</span>
-              <img class="h-8 w-auto" src="favicon.svg" alt="Bust My Shame logo">
-            </a>
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Bust My Shame</span>
+            <img class="h-8 w-auto" src="favicon.svg" alt="Bust My Shame logo">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div id="start-div" class="h-screen relative isolate px-6 pt-8 lg:px-8">
+      <div class="mx-auto max-w-2xl py-32">
+        <div class="text-center">
+          <h1 class="text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What memory haunts you?</h1>
+          <div class="mt-8 justify-center flex items-center">
+            <p class="text-2xl sm:text-4xl font-bold leading-8 text-coyote">I...</p>
+            <label for="reason" class="sr-only">Reason</label>
+            <input name="reason" id="reason-input" class="w-3/4 px-2 rounded-md bg-sugarcane text-coyote placeholder:text-coyote-pale font-bold placeholder:italic placeholder:font-bold outline-none focus:ring-0 border-0 sm:text-4xl text-2xl autofocus">
           </div>
-        </nav>
-      </header>
-      <div class="relative isolate px-6 pt-8 lg:px-8">
-        <div class="mx-auto max-w-2xl py-32">
-          <div class="text-center">
-            <h1 class="text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What memory haunts you?</h1>
-            <div class="mt-8 justify-center flex items-center">
-              <p class="text-2xl sm:text-4xl font-bold leading-8 text-coyote">I...</p>
-              <label for="reason" class="sr-only">Reason</label>
-              <input name="reason" id="reason-input" class="hidden sm:block rounded-md bg-sugarcane text-coyote placeholder:text-coyote-pale font-bold placeholder:italic placeholder:font-bold outline-none focus:ring-0 border-0 text-4xl" autofocus>
-              <input name="reason" id="mobile-typewriter" class="w-3/4 text-2xl sm:hidden rounded-md bg-sugarcane text-coyote placeholder:text-coyote-pale font-bold placeholder:italic placeholder:font-bold outline-none focus:ring-0 border-0" autofocus>
-            </div>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a href="#" class="rounded-md bg-olivine px-3.5 py-2.5 text-sm font-semibold text-coyote-dark shadow-sm hover:bg-olivine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                Bust it.
-              </a>
-              <a href="#" class="text-sm font-semibold leading-6 text-coyote-dark">Learn more <span class="text-olivine" aria-hidden="true">→</span></a>
-            </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <button id="bust-button" class="rounded-md bg-raspberry px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-olivine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Bust it.
+            </button>
+            <a href="#" class="text-sm font-semibold leading-6 text-coyote-dark">Learn more <span class="text-olivine" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="context-div" class="h-screen hidden">
+      <div class="mx-auto max-w-2xl py-32">
+        <div class="text-center">
+          <h1 class="text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What were you going through back then?</h1>
+          <div class="mt-8 justify-center flex items-center">
+            <p class="text-2xl sm:text-4xl font-bold leading-8 text-coyote"></p>
+            <label for="reason" class="sr-only">Reason</label>
+          </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="text-sm font-semibold leading-6 text-coyote-dark">Next <span class="text-olivine" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>

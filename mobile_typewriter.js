@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const placeholders = [
     "got rejected.",
     "moved back home.",
+    "lost my temper.",
     "failed my children.",
+    "looked so ugly.",
     "went bankrupt.",
     "gained weight.",
     "cooked a bad meal.",

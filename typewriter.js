@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   const inputField = document.getElementById('reason-input');
   const placeholders = [
-    "said something really stupid.",
-    "got rejected by my crush.",
-    "moved back in with my mom.",
-    "didn't know an easy answer.",
-    "failed in front of my son.",
-    "gave a terrible presentation.",
-    "lost my job twice in a row.",
-    "still haven't lost any weight.",
-    "cooked a really bad meal.",
-    "failed out of university twice."
+    "got rejected.",
+    "moved back home.",
+    "lost my temper.",
+    "failed my children.",
+    "looked so ugly.",
+    "went bankrupt.",
+    "gained weight.",
+    "cooked a bad meal.",
+    "flunked university."
   ];
 
   let index = 0;
