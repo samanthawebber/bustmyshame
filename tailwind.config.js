@@ -1,6 +1,9 @@
 module.exports = {
   content: ['./**/*.{html,js}'],
   theme: {
+    fontFamily: {
+      dinot: ['DIN OT', ],
+    },
     colors: {
       'sugarcane': '#f0ede3',
       'coyote': '#82735c',

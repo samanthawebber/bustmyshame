@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "DIN OT";
+  src: url("/fonts/dinot.ttf");
+}

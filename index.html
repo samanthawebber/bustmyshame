@@ -34,7 +34,7 @@
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
+          <a href="index.html" class="-m-1.5 p-1.5">
             <span class="sr-only">Bust My Shame</span>
             <img class="h-8 w-auto" src="favicon.svg" alt="Bust My Shame logo">
           </a>
@@ -44,11 +44,11 @@
     <div id="start-div" class="h-screen relative isolate px-6 pt-8 lg:px-8">
       <div class="mx-auto max-w-2xl py-32">
         <div class="text-center">
-          <h1 class="text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What memory haunts you?</h1>
+          <h1 class="text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What memory fills you with shame?</h1>
           <div class="mt-8 justify-center flex items-center">
             <p class="text-2xl sm:text-4xl font-bold leading-8 text-coyote">I...</p>
             <label for="reason" class="sr-only">Reason</label>
-            <input name="reason" id="reason-input" class="w-3/4 px-2 rounded-md bg-sugarcane text-coyote placeholder:text-coyote-pale font-bold placeholder:italic placeholder:font-bold outline-none focus:ring-0 border-0 sm:text-4xl text-2xl autofocus">
+            <input name="reason" id="reason-input" placeholder="" class="w-3/4 px-2 rounded-md bg-sugarcane text-coyote placeholder:text-coyote-pale font-bold placeholder:italic placeholder:font-bold outline-none focus:ring-0 border-0 sm:text-4xl text-2xl autofocus">
           </div>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <button id="bust-button" class="rounded-md bg-raspberry px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-olivine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
@@ -60,22 +60,112 @@
       </div>
     </div>
 
-    <div id="context-div" class="h-screen hidden">
+    <div id="context-div" class="hidden h-screen">
       <div class="mx-auto max-w-2xl py-32">
         <div class="text-center">
-          <h1 class="text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What were you going through back then?</h1>
+          <p id="reason-p" class="text-4xl text-coyote italic"></p>
+          <h1 class="mt-12 text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">Alright. What were you going through before this event?</h1>
           <div class="mt-8 justify-center flex items-center">
-            <p class="text-2xl sm:text-4xl font-bold leading-8 text-coyote"></p>
-            <label for="reason" class="sr-only">Reason</label>
+            <div class="w-full max-w-lg">
+              <label for="context" class="block text-md font-medium leading-6 text-coyote-dark">Think a moment. Dig deep.</label>
+              <div class="mt-2">
+                <textarea rows="4" name="context" id="context-input" class="block w-full bg-sugarcane py-1.5 mx-2 sm:mx-0 text-coyote-dark placeholder:text-coyote-pale focus:ring-0 border-t-0 border-l-0 border-r-0 border-b-2 border-olivine sm:text-sm sm:leading-6" autofocus></textarea>
+              </div>
+            </div>
           </div>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="text-sm font-semibold leading-6 text-coyote-dark">Next <span class="text-olivine" aria-hidden="true">→</span></a>
+            <a id="context-next" class="text-sm font-semibold leading-6 text-coyote-dark hover:cursor-pointer">Next <span class="text-olivine" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="effect-div" class="hidden h-screen">
+      <div class="mx-auto max-w-2xl py-32">
+        <div class="text-center">
+          <p id="reason-p" class="text-4xl text-coyote italic"></p>
+          <h1 class="mt-12 text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">And how did that affect your actions?</h1>
+          <div class="mt-8 justify-center flex items-center">
+            <div class="w-full max-w-lg">
+              <label for="context" class="block text-md font-medium leading-6 text-coyote-dark">Go back. Remember.</label>
+              <div class="mt-2">
+                <textarea rows="4" name="context" id="effect-input" class="block w-full bg-sugarcane py-1.5 mx-2 sm:mx-0 text-coyote-dark placeholder:text-coyote-pale focus:ring-0 border-t-0 border-l-0 border-r-0 border-b-2 border-olivine sm:text-sm sm:leading-6" autofocus></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a id="effect-next" class="text-sm font-semibold leading-6 text-coyote-dark hover:cursor-pointer">Next <span class="text-olivine" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="happening-div" class="hidden h-screen">
+      <div class="mx-auto max-w-2xl py-32">
+        <div class="text-center">
+          <p id="reason-p" class="text-4xl text-coyote italic"></p>
+          <h1 class="mt-12 text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">Write down exactly what happened in this shame-ridden memory.</h1>
+          <div class="mt-8 justify-center flex items-center">
+            <div class="w-full max-w-lg">
+              <label for="context" class="block text-md font-medium leading-6 text-coyote-dark">Don't be afraid to get detailed and emotional.</label>
+              <div class="mt-2">
+                <textarea rows="4" name="context" id="happening-input" class="block w-full bg-sugarcane py-1.5 mx-2 sm:mx-0 text-coyote-dark placeholder:text-coyote-pale focus:ring-0 border-t-0 border-l-0 border-r-0 border-b-2 border-olivine sm:text-sm sm:leading-6" autofocus></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a id="happening-next" class="text-sm font-semibold leading-6 text-coyote-dark hover:cursor-pointer">Next <span class="text-olivine" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="reflection-div" class="hidden h-screen">
+      <div class="mx-auto max-w-2xl py-32">
+        <div class="text-center">
+          <p id="reason-p" class="text-4xl text-coyote italic"></p>
+          <h1 class="mt-12 text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl">What would you differently, if you could go back?</h1>
+          <div class="mt-8 justify-center flex items-center">
+            <div class="w-full max-w-lg">
+              <label for="context" class="block text-md font-medium leading-6 text-coyote-dark">Or given your circumstances, did you do all you could?</label>
+              <div class="mt-2">
+                <textarea rows="4" name="context" id="reflection-input" class="block w-full bg-sugarcane py-1.5 mx-2 sm:mx-0 text-coyote-dark placeholder:text-coyote-pale focus:ring-0 border-t-0 border-l-0 border-r-0 border-b-2 border-olivine sm:text-sm sm:leading-6" autofocus></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a id="reflection-next" class="text-sm font-semibold leading-6 text-coyote-dark hover:cursor-pointer">Read your story <span class="text-olivine" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="story-div" class="hidden h-screen">
+      <div class="mx-auto py-32">
+        <div class="px-4">
+          <h1 id="story-title" class="mt-12 text-balance text-4xl font-bold tracking-tight text-coyote-dark sm:text-5xl"></h1>
+          <div class="mt-8 sm:px-2 flex items-center">
+            <div class="w-full max-w-lg">
+              <p id="context-p" class="text-xl text-coyote-dark"></p>
+              <br>
+              <p id="effect-p" class="text-xl text-coyote-dark"></p>
+              <br>
+              <p id="happening-p" class="text-xl text-coyote-dark"></p>
+              <br>
+              <p id="reflection-p" class="text-xl text-coyote-dark"></p>
+              <br>
+            </div>
+            <br>
+          </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a id="story-back" class="text-sm font-semibold leading-6 text-coyote-dark hover:cursor-pointer">Go back <span class="text-olivine" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="">
-      <div class="mx-auto max-w-7xl overflow-hidden px-6 pt-32 pb-6 lg:px-8">
+      <div class="mx-auto max-w-7xl overflow-hidden px-6 pt-32 pb-6 ">
         <p class="text-center text-sm leading-5 text-coyote">Something not working? Hit me up: samantha (dot) webber (at) protonmail (dot) com.</p>
         <p class="text-center text-xs leading-5 text-coyote-pale">&copy; 2024 Samantha Webber. All rights reserved.</p>
         <!-- <p class="text-xs text-center leading-5 text-gray-500">

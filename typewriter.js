@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const inputField = document.getElementById('reason-input');
   const placeholders = [
     "got rejected.",
-    "moved back home.",
     "lost my temper.",
-    "failed my children.",
     "looked so ugly.",
+    "moved back home.",
+    "failed my children.",
     "went bankrupt.",
     "gained weight.",
     "cooked a bad meal.",
