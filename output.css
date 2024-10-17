@@ -774,16 +774,8 @@ select {
   right: 0px;
 }
 
-.right-8 {
-  right: 2rem;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.right-12 {
-  right: 3rem;
 }
 
 .z-50 {
@@ -961,6 +953,11 @@ select {
   padding-bottom: 0.375rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -969,11 +966,6 @@ select {
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .pb-6 {

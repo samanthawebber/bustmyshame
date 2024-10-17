@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     contextP.append(contextInput.value);
     effectP.append(effectInput.value);
     happeningP.append(happeningInput.value);
-    reflectP.append(reflectionInput.value);
+    reflectionP.append(reflectionInput.value);
   };
 
 });
